@@ -16,14 +16,16 @@ import java.time.LocalDateTime;
 public class Feedback extends BaseEntity {
 
 
+    private String content;
+
+    private LocalDateTime date;
+
     @ManyToOne
     private User user;
 
     @ManyToOne
     private Category category;
 
-    private String content;
-
-    private LocalDateTime date;
+    private boolean isActive = false;
 
 }
